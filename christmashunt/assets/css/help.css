@@ -1,0 +1,86 @@
+.prompt {
+    width: 500px;
+    height: 300px;
+    background-color: var(--second);
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+}
+
+
+
+.prompt h2 {
+    font-weight: 600;
+    color: var(--main);
+    margin-bottom: 20px;
+}
+
+.prompt p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+
+.prompt strong {
+    font-weight: 400;
+}
+
+.prompt span {
+    color: var(--main);
+}
+
+.prompt a {
+    padding: 3px;
+    background-color: rgba(255, 178, 62, 0.315);
+    border-radius: 5px;
+    height: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.back {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 7px;
+    margin-top: 30px;
+    transition: 0.3s all ease-in-out;
+}
+
+
+.back:hover {
+    color: var(--main);
+    cursor: pointer;
+    background-color: var(--hover);
+    border-radius: 4px;
+}
+
+
+@media (max-width: 700px) {
+    .prompt {
+        width:70% !important;
+        top: 50%;
+        height: auto !important;
+        padding: 1em;
+    }
+    .prompt h2 {
+        font-size: 15px !important;
+    }
+
+    .prompt p {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .prompt a {
+        height: 7px;
+        padding: 1px;
+    }
+
+    .back {
+        font-size: 13px;
+    }
+    
+}

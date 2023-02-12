@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/loadfirst.css">
+    <link rel="stylesheet" href="/assets/css/accountload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/nav.css">
+    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="">
+            </div>
+            <div class="buttons">
+                <a href="/index" target="_blank"><button>Home</button></a>
+                <a href="/hints" target="_blank" class="hideonadmin"><button>Hints</button></a>
+                <a href="/help" target="_blank" class="hideonadmin"><button>Help</button></a>
+                <a href="/admin/accountlist" target="_blank" class="showonadmin"><button>Leaderboard</button></a>
+                <a href="/admin/create" target="_blank" class="showonadmin"><button>Account</button></a>
+                <a href="/logout"><button>Log Out</button></a>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="userlist">
+                <button class="refresh">Refresh</button>
+                <div class="user"></div>
+                <div class="user"></div>
+            </div>
+            <div class="info">
+                <h1>Team Information</h1>
+                <p class="loadteamname">Hello</p>
+                <div class="field">
+                    <h2>Level</h2>
+                    <p class="loadlevel">0</p>
+                    <p class="leveltime">At 2:30</p>
+                </div>
+                <div class="field">
+                    <h2>Logs</h2>
+                    
+                    <div class="logs">
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div><div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                        <div class="log">Hello</div>
+                    </div>
+                </div>
+                <div class="field">
+                    <h2>Progression</h2>
+                    <div class="progs">
+                        <div class="prog"><span>1</span> 10:20</div>
+                        <div class="prog"><span>1</span> 10:20</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <input type="text" style="display: none;" class="noinput">
+    <script>
+        // if (window.localStorage.getItem("User") == null) {
+        //     window.location.replace("/login")
+        // }
+        // let user = JSON.parse(window.localStorage.getItem("User"))
+
+        // if (!user.Status == "Admin") {
+        //     window.localStorage.replace("/index")
+        // }
+    </script>
+    <script type="module" src="/assets/js/reloadaccounts.js"></script>
+    <script src="/assets/js/index.js" type="module"></script>
+    
+</body>
+</html>

@@ -1,0 +1,170 @@
+.nav {
+    height: 50px;
+    width: 700px;
+    border-radius: 10px;
+    background-color: var(--second);
+    position: fixed;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    top: 20px;
+    background-color: var(--second);
+    transform: translateX(-50%);
+}
+
+.nav div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 1000px;
+}
+
+.buttons {
+    width: auto;
+    height: 50px;
+    margin-right: 10px;
+    
+}
+
+.buttons button {
+    width: auto;
+    height: 40px;
+    margin-top: 5px;    
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: 0.5s all ease-in-out;
+}
+
+.buttons button:hover {
+    color: var(--main);
+    cursor: pointer;
+    background-color: var(--hover);
+}
+
+
+@media only screen and (min-width: 750px) {
+    .nav {
+        height: 50px;
+        width: 700px;
+        border-radius: 10px;
+        background-color: var(--second);
+        position: fixed;
+        left: 50%;
+        display: flex;
+        justify-content: space-between;
+        top: 20px;
+        background-color: var(--second);
+        transform: translateX(-50%);
+    }
+    
+    .nav div {
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    .logo {
+        height: 50px;
+        width: 50px;
+        
+    }
+    
+    .logo img {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        border-radius: 1000px;
+    }
+    
+    .buttons {
+        width: auto;
+        height: 50px;
+        margin-right: 10px;
+        
+    }
+    
+    .buttons button {
+        width: auto;
+        height: 40px;
+        margin-top: 5px;    
+        padding-left: 17px;
+        padding-right: 17px;
+        border-radius: 5px;
+        background-color: transparent;
+        transition: 0.5s all ease-in-out;
+    }
+    
+    .buttons button:hover {
+        color: var(--main);
+        cursor: pointer;
+        background-color: var(--hover);
+    }
+}
+
+
+
+
+.navtoggle {
+    width: 100px;
+    background-color: transparent;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 700px){
+    .nav {
+        width: 450px;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .navtoggle {
+        display: auto;
+    }
+}
+
+@media (min-width: 500px) {
+    .navtoggle {
+        display: none;
+    }
+}
+
+@media (min-width: 250px) and (max-width: 500px){
+   .nav {
+    width: 90%;
+    z-index: 100000000;
+   }
+   
+   .buttons {
+    display: none;
+    position: fixed;
+    width: 90%;
+    left: 50%;
+    top: 10vh;
+    transform: translate(-50%);
+    background-color: var(--second);
+    z-index: 100000000000000;
+    border: 1px solid rgba(128, 128, 128, 0.233);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: auto;
+    border-radius: 10px;
+   }
+
+   .buttons > a {
+    display: block;
+    text-align: center;
+   }
+
+}

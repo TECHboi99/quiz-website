@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/loadfirst.css">
+    <link rel="stylesheet" href="/assets/css/hint.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/nav.css">
+    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="">
+            </div>
+            <button class="navtoggle" data-active="false"><i class="fa fa-bars"></i></button>
+
+            <div class="buttons">
+                <a href="/index" target="_blank"><button>Home</button></a>
+                <a href="/hints" target="_blank" class="hideonadmin"><button>Hints</button></a>
+                <a href="/help" target="_blank" class="hideonadmin"><button>Help</button></a>
+                <a href="/admin/accountlist" target="_blank" class="showonadmin"><button>Leaderboard</button></a>
+                <a href="/admin/create" target="_blank" class="showonadmin"><button>Account</button></a>
+                <a href="/logout"><button>Log Out</button></a>
+            </div>
+        </div>    <input type="text" style="display: none;" class="noinput">
+
+        <p class="level">Hints for <span class="levelname">level 0</span></p>
+        <p class="nohint">No hints yet..</p>
+        <div class="hints">
+            <div class="hint">
+                <h2>Hint #1</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, in?</p>
+            </div>
+            <div class="hint">
+                <h2>Hint #1</h2>
+                <p>lorem50</p>
+            </div>
+            <div class="hint">
+                <h2>Hint #1</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, in?</p>
+            </div>
+            <div class="hint">
+                <h2>Hint #1</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, in?</p>
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="winner">
+        <div class="winbox">
+            <h2>Winners!</h2>
+            <p>First : BlurryDrink<br>Second : Sewey Triumvirate</p>
+            <button class="closewin close">Close</button>
+        </div>
+    </div>
+    <script>
+        let res = window.localStorage.getItem("popup")
+        let latest = "AC"
+
+        if (res == latest) {
+            document.querySelector(".winbox").style.display = "none"
+        } else {
+            document.querySelector(".winbox").style.display = "block"
+        }
+
+        document.querySelector(".closewin").addEventListener("click",()=>{
+            window.localStorage.setItem("popup", latest)
+            document.querySelector(".winbox").style.display = "none"
+        })
+    </script>
+    <script>
+        if (window.localStorage.getItem("User") == null) {
+            window.location.replace("/login")
+        }
+    </script>
+    <script src="/assets/js/data.js"></script>
+    <script src="/assets/js/index.js" type="module"></script>
+    
+</body>
+</html>

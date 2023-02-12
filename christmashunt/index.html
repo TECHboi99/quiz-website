@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/loadfirst.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/nav.css">
+    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="main" data-ismain="true">
+        <div class="nav">
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="">
+            </div>
+            <button class="navtoggle" data-active="false"><i class="fa fa-bars"></i></button>
+
+            <div class="buttons">
+                <a href="/index" target="_blank"><button>Home</button></a>
+                <a href="/hints" target="_blank" class="hideonadmin"><button>Hints</button></a>
+                <a href="/help" target="_blank" class="hideonadmin"><button>Help</button></a>
+                <a href="/admin/accountlist" target="_blank" class="showonadmin"><button>Leaderboard</button></a>
+                <a href="/admin/create" target="_blank" class="showonadmin"><button>Account</button></a>
+                <a href="/logout"><button>Log Out</button></a>
+            </div>
+        </div>
+        <div class="question">
+            <p class="level">Loading..</p>
+            <div class="content">
+
+                Loading..
+            </div>
+            <div class="input">
+
+                <input type="text" class="answer" placeholder="Press enter to submit" maxlength="40">
+            </div>
+            
+        </div>
+        <div class="win">
+            <h2>YOU WON!!</h2>
+            <p>Congratulations, <span class="usernameadd">username</span>! You have officially completed all 15 levels of Christmas Hunt 2022-23!</p>
+            <img src="https://i.giphy.com/media/8F5Z9rrETggGE4VLpM/giphy.webp" alt="">
+            <a target="_blank" href="https://discord.com/channels/1052943888240877628/1054020360430956564/1055888668709109891"><button class="share">Click here to blame the sender of the gif.</button></a>
+        </div>
+        
+    </div>
+    <div id="confettis">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+      </div>
+      <div class="winner">
+        <div class="winbox">
+            <h2>Winners!</h2>
+            <p>First : BlurryDrink<br>Second : Sewey Triumvirate</p>
+            <button class="closewin close">Close</button>
+        </div>
+    </div>
+    <script>
+        let res = window.localStorage.getItem("popup")
+        let latest = "AC"
+
+        if (res == latest) {
+            document.querySelector(".winbox").style.display = "none"
+        } else {
+            document.querySelector(".winbox").style.display = "block"
+        }
+
+        document.querySelector(".closewin").addEventListener("click",()=>{
+            window.localStorage.setItem("popup", latest)
+            document.querySelector(".winbox").style.display = "none"
+        })
+    </script>
+    
+    <script>
+        if (window.localStorage.getItem("User") == null) {
+            window.location.replace("/login")
+        }
+        document.querySelector(".main").style.opacity = 1
+    </script>
+    <script src="/assets/js/index.js" type="module"></script>
+    <script>
+
+        document.querySelector(".usernameadd").innerHTML = JSON.parse(window.localStorage.getItem("User")).Username
+
+    
+    </script>
+</body>
+</html>

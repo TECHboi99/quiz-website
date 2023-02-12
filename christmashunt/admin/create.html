@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/loadfirst.css">
+    <link rel="stylesheet" href="/assets/css/create.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/nav.css">
+    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="">
+            </div>
+            <div class="buttons">
+                <a href="/index" target="_blank"><button>Home</button></a>
+                <a href="/hints" target="_blank" class="hideonadmin"><button>Hints</button></a>
+                <a href="/help" target="_blank" class="hideonadmin"><button>Help</button></a>
+                <a href="/admin/accountlist" target="_blank" class="showonadmin"><button>Leaderboard</button></a>
+                <a href="/admin/create" target="_blank" class="showonadmin"><button>Account</button></a>
+                <a href="/logout"><button>Log Out</button></a>
+            </div>
+        </div>
+        <div class="create">
+            <div class="stage stage1">
+                <h1>Step 1/3</h1>
+                <p>Enter account usernames seperated by a space.</p>
+                <textarea name="" id="" cols="30" rows="10" class="userlistentry"></textarea>
+                <button class="next next1">Next</button>
+            </div>
+            <div class="stage stage2">
+                <h1>Step 2/3</h1>
+                <p>Verify usernames.</p>
+                <div class="userlist stage1user">
+                    
+                </div>
+                <button class="next next2">Next</button>
+            </div>
+            <div class="stage stage3">
+                <h1>Step 3/3</h1>
+                <p>Now, once an account name is displayed, choose a password for it. Press enter to move to the new account. Press tab to generate a random password.. Once you have set a password for all accounts, click next.</p>
+                <div class="account-name"></div>
+                <input type="text" class="userpassword">
+                <button class="next next3">Next</button>
+            </div>
+            <div class="stage stage4">
+                <h1>Step 4/4</h1>
+                <p>Verify the information for all accounts. Once you have checked it, click create. All accounts will be created, and once done, you will get a link to send an email to all accounts with their credentials.</p>
+                <div class="userlist finalusers">
+                    <div class="header">
+                        <div class="sno">No.</div>
+                        <div class="displayusername">Username</div>
+                        <div class="displaypassword">Password</div>
+                    </div>
+                    
+                </div>
+                <button class="next createacc">Create</button>
+            </div>
+            <div class="stage stage5">
+                <h1>Creating accounts..</h1>
+                <p>Please do not switch or close this tab while processing.</p>
+                <h3 class="estimatedTime">Estimated time : 30s</h3>
+                <div class="statusbar">
+                    <i class="fa fa-spin fa-circle-o-notch"> </i>
+                    <p class="current">Creating <span class="entercurrent">username</span></p>
+                </div>
+                <div class="logs">
+                    
+                </div>
+            </div>
+
+            <div class="accountmail stage">
+                <h1>Send Login Credentials</h1>
+                <p>Please enter the respective email address for each team, and click send.</p>
+                <div class="teamlistmail">
+                    <div class="mailteam">
+                        <p class="teamnamemail">Lorem ipsum dolor sit.</p>
+                        <input type="text" class="teamemail">
+                        <button class="sendmail">Send</button>
+                    </div>
+                    <div class="mailteam">
+                        <p class="teamnamemail">Lorem ipsum dolor sit.</p>
+                        <input type="text" class="teamemail">
+                        <button class="sendmail">Send</button>
+                    </div>
+                    <div class="mailteam">
+                        <p class="teamnamemail">Lorem ipsum dolor sit.</p>
+                        <input type="text" class="teamemail">
+                        <button class="sendmail">Send</button>
+                    </div>
+                    <div class="mailteam">
+                        <p class="teamnamemail">Lorem ipsum dolor sit.</p>
+                        <input type="text" class="teamemail">
+                        <button class="sendmail">Send</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <input type="text" style="display: none;" class="noinput">
+
+    </div>
+    <script>
+        if (window.localStorage.getItem("User") == null) {
+            window.location.replace("/login")
+        }
+        let user = JSON.parse(window.localStorage.getItem("User"))
+
+        if (!user.Status == "Admin") {
+            window.localStorage.replace("/index")
+        }
+    </script>
+    <script type="module" src="/assets/js/createaccounts.js"></script>
+    <script src="/assets/js/index.js" type="module"></script>
+    <!-- <script type="module">
+        // Import the functio // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBitFIGq7erLyJ_A_s8JO2Ue054jRfYF5c",
+            authDomain: "christmashunt-7921c.firebaseapp.com",
+            databaseURL: "https://christmashunt-7921c-default-rtdb.firebaseio.com",
+            projectId: "christmashunt-7921c",
+            storageBucket: "christmashunt-7921c.appspot.com",
+            messagingSenderId: "824330788884",
+            appId: "1:824330788884:web:aa94b27749da340a3c4701",
+            measurementId: "G-2LR1GCDGBX"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        import {
+            getFirestore, doc, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField
+        }
+        from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js"
+    
+        const database = getFirestore();
+    
+    
+    
+    
+    
+    
+    
+    
+        async function validateLogin() {
+            
+            var ref = doc(database, "LocalResponseService", "level0")
+            const docSnap = await getDoc(ref)
+            
+    
+            if (docSnap.exists()) {
+
+                const myData = docSnap.data()
+                
+            } else {
+                
+            }
+        }
+    
+        document.querySelector(".test").addEventListener("click", ()=>{
+            
+            validateLogin()
+        })
+
+
+    
+    
+    </script> -->
+</body>
+</html>

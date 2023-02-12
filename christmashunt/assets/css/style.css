@@ -1,0 +1,251 @@
+
+
+
+
+
+
+
+.showonadmin button {
+    display: none;
+}
+
+
+
+
+
+.main {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.question, .win {
+    max-height: 400px;
+    width: 500px;
+    height: auto;
+    padding: 2em;
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    background-color: var(--second);
+}
+
+.win h2 {
+    color: var(--main);
+    font-size: 30px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.win img {
+    width: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+}
+
+.win span {
+    color: var(--main);
+}
+
+.win {
+    display: none;
+}
+
+.share {
+    font-size: 14px !important;
+    padding:5px !important;
+    margin-left: 50%;
+    width: 300px;
+    margin-top: 30px;
+
+    transform: translateX(-50%);
+    border: 1px solid var(--main);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    border-radius: 4px;
+}
+
+.share:hover {
+    background-color: var(--main);
+    color: var(--second);
+}
+
+.win p {
+    font-size: 17px;
+    text-align: center;
+}
+
+/* * {
+    outline: 1px solid grey;
+}
+
+.content {
+    outline: 1px solid red;
+} */
+
+
+.input {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+
+}
+
+.answer {
+    height: 38px;
+    width: 100%;
+    padding: 6px 10px;
+    background-color: var(--second);
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+.level {
+    color: var(--main);
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.answer:focus {
+    border: 1px solid var(--main);
+}
+
+.content {
+    overflow-y: scroll;
+    max-height: 310px;
+    overflow-x: hidden;
+}
+.content img {
+    width: auto;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 4px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media (max-width: 700px) {
+    .question {
+        width:70% !important;
+        top: 50%;
+        height: auto !important;
+        padding: 1em;
+    }
+    .level {
+        font-size: 17px !important;
+    }
+
+    .content {
+        font-size: 14px !important;
+    }
+
+    .answer {
+        height: 30px;
+    }
+    
+}
+
+.content img {
+    width: 100%;
+}
+
+
+#confettis {
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    pointer-events: none;
+  }
+  .confetti {
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    transform-origin: left top;
+    animation: confetti 5s ease-in-out -2s infinite;
+  }
+  @keyframes confetti {
+    0% {
+      transform: rotateZ(15deg) rotateY(0deg) translate(0, 0);
+    }
+    25% {
+      transform: rotateZ(5deg) rotateY(360deg) translate(-5vw, 20vh);
+    }
+    50% {
+      transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 60vh);
+    }
+    75% {
+      transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw, 80vh);
+    }
+    100% {
+      transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 110vh);
+    }
+  }
+
+
+  .confetti:nth-child(1) {
+    left: 10%;
+    animation-delay: 0;
+    background-color: #fc0120;
+  }
+  .confetti:nth-child(2) {
+    left: 20%;
+    animation-delay: -5s;
+    background-color: #8257e6;
+  }
+  .confetti:nth-child(3) {
+    left: 30%;
+    animation-delay: -3s;
+    background-color: #ffbf4d;
+  }
+  .confetti:nth-child(4) {
+    left: 40%;
+    animation-delay: -2.5s;
+    background-color: #fe5d7a;
+  }
+  .confetti:nth-child(5) {
+    left: 50%;
+    animation-delay: -4s;
+    background-color: #45ec9c;
+  }
+  .confetti:nth-child(6) {
+    left: 60%;
+    animation-delay: -6s;
+    background-color: #f6e327;
+  }
+  .confetti:nth-child(7) {
+    left: 70%;
+    animation-delay: -1.5s;
+    background-color: #f769ce;
+  }
+  .confetti:nth-child(8) {
+    left: 80%;
+    animation-delay: -2s;
+    background-color: #007de7;
+  }
+  .confetti:nth-child(9) {
+    left: 90%;
+    animation-delay: -3.5s;
+    background-color: #63b4fc;
+  }
+  .confetti:nth-child(10) {
+    left: 100%;
+    animation-delay: -2.5s;
+    background-color: #f9c4ea;
+  }
+  

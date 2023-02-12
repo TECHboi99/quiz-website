@@ -1,0 +1,233 @@
+.create {
+    width: 500px;
+    height: 400px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--second);
+    border-radius: 10px;
+    padding: 2em;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+}
+
+.stage {
+    width: 100%;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-bottom: 100px;
+}
+
+.stage h1 {
+    color: var(--main);
+    font-weight: 500;
+    font-size: 30px;
+}
+
+input, textarea {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height: 34px;
+    resize: none;
+    width: 100%;
+    padding: 6px 10px;
+    background-color: var(--second);
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 200px !important;
+}
+
+.next {
+    width: 120px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid var(--main);
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.next:hover {
+    background-color: var(--main);
+    color: var(--second);
+}
+
+.stage1, .stage2, .stage3, .stage4 {
+    display: none;
+}
+
+.userlist {
+    margin-top: 30px;
+    width: 100%;
+    height: 200px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+}
+
+.useritem {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 5px;
+    cursor: default;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.178);
+}
+
+.useritem span {
+    margin-right: 10px;
+    color: grey;
+}
+
+
+.stage4 .userlist {
+    height: 150px;
+}
+
+.account-name {
+    margin-top: 30px;
+    padding: 3px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 187, 0, 0.281);
+    height: 35px;
+    line-height: 35px;
+}
+
+.stage3 input {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.header {
+    width: 100%;
+}
+
+
+.stage h3 {
+    margin-top: 20px;
+    font-weight: 400;
+    color: grey;
+}
+
+.statusbar {
+    margin-top: 30px;
+    padding: 7px;
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(15, 15, 15, 0.068);
+}
+
+.logs {
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 130px;
+    overflow-y: scroll;
+    background-color: rgb(19, 19, 19);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.logs div {
+    color: var(--second);
+    font-weight: 200;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+}
+
+.logitem span {
+    color: grey;
+    margin-right: 10px;
+}
+
+.statusbar * {
+    display: inline-block;
+}
+
+.statusbar span {
+    color: var(--main);
+}
+
+.header, .userentry {
+    height: 30px;
+    display: flex;
+    line-height: 30px;
+    
+}
+
+.header div {
+    background-color: rgba(15, 15, 15, 0.068);
+}
+.sno, .displayusername, .displaypassword {
+    display: inline-block;
+    padding-left: 5px;
+    vertical-align: top;
+    border: 01px solid rgba(0, 0, 0, 0.116);
+
+}
+
+.sno {
+    width: 30px;
+}
+
+.displayusername {
+    width: 200px;
+}
+
+.displaypassword {
+    width: 200px;
+}
+
+.teamlistmail {
+    height: 240px;
+    overflow-y: scroll;
+    margin-top: 20px;
+}
+
+.mailteam {
+    width: 100%;
+    padding-top: 8px;
+    height: 60px;
+    padding: 5px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.315);
+}
+
+
+
+.tamenameemail {
+    width: 100%;
+}
+
+
+
+.teamemail {
+    margin: 0;
+    margin-top: 10px;
+    height: 26px;
+    width: 300px;
+}
+
+.sendmail {
+    height: 26px;
+    width: 100px;
+    border-radius: 4px;
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.sendmail:hover{
+    background-color: var(--main);
+    color: var(--second);
+}

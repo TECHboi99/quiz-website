@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/loadfirst.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/nav.css">
+    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="">
+            </div>
+            <button class="navtoggle" data-active="false"><i class="fa fa-bars"></i></button>
+
+            <div class="buttons">
+                <a href="/login"><button>Login</button></a>
+                <a href="/help"><button>Help</button></a>
+            </div>
+        </div>
+        <div class="question">
+            <p class="level">Login</p>
+            <div class="field">
+                <p>Username</p>
+                <input type="text" class="username">
+            </div>
+            <div class="field">
+                <p>Password</p>
+                <input type="password" class="password">
+            </div>
+            <p class="error"> </p>
+            <button class="login">Login</button>
+        </div>
+        
+    </div>
+    <script>
+        if (window.localStorage.getItem("User") == null) {
+            
+        } else {
+            window.location.replace("/index")
+        }
+    </script>
+    <script src="/assets/js/index.js" type="module"></script>
+    <script src="/assets/js/login.js" type="module"></script>
+</body>
+</html>

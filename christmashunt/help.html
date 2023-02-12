@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/loadfirst.css">
+    <link rel="stylesheet" href="/assets/css/help.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/nav.css">
+    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="">
+            </div>    <input type="text" style="display: none;" class="noinput">
+
+            <button class="navtoggle" data-active="false"><i class="fa fa-bars"></i></button>
+
+            <div class="buttons">
+                <a href="/index" target="_blank"><button>Home</button></a>
+                <a href="/help" target="_blank" class="hideonadmin"><button>Help</button></a>
+                <a href="/logout" class=""><button>Log Out</button></a>
+                
+                
+            </div>
+        </div>
+        <div class="prompt">
+            <h2>Need help? No problem!</h2>
+            <p>If you are facing an issue with any aspect of the hunt, please feel free to contact us! </p>
+            <p>For any technical issues, please ping <span>Ronav Singhal</span> with your query in the <a href="/discord/channels/help">#help</a> channel on our discord server.</p>
+            <p>For any other issues, please contact a member from our team on the <a href="/discord/channels/help">#help</a> channel on our discord server.</p>
+            <p>Happy Hunting!</p>
+            <button class="back" onclick="history.back()"><i class="fa fa-long-arrow-left"></i> back</button>
+        </div>
+        
+    </div>
+    <div class="winner">
+        <div class="winbox">
+            <h2>Winners!</h2>
+            <p>We have our first place winners, team BlurryDrink. <br>Keep fighting for second place!</p>
+            <button class="closewin close">Close</button>
+        </div>
+    </div>
+    <script>
+        let res = window.localStorage.getItem("popup")
+        let latest = "AB"
+
+        if (res == latest) {
+            document.querySelector(".winbox").style.display = "none"
+        } else {
+            document.querySelector(".winbox").style.display = "block"
+        }
+
+        document.querySelector(".closewin").addEventListener("click",()=>{
+            window.localStorage.setItem("popup", latest)
+            document.querySelector(".winbox").style.display = "none"
+        })
+    </script>
+    <script src="/assets/js/index.js" type="module"></script>
+</body>
+</html>
